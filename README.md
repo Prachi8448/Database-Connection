@@ -13,7 +13,9 @@ mydatabase = mysql.connector.connect(
 mycursor = mydatabase.cursor()
 
 sql_query = "INSERT INTO student (name, address) VALUES (%s, %s)"
+
 value = ("Prachi", "Noida")
+
 mycursor.execute(sql_query, value)
 
 mydatabase.commit()
